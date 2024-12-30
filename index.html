@@ -1,0 +1,122 @@
+﻿<!doctype html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="JavaScript Prog 3">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Telem">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>תכנות 3 - JavaScript</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">עמוד הבית</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="contactLink">צור קשר</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">אודות</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="חיפוש" aria-label="Search" id="search">
+                    <button class="btn btn-outline-warning" type="submit" id="searchButton">חיפוש</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="header-background">
+        <div class="my-slider-wrapper">
+            <div id="carousel">
+                <button id="prev">←</button>
+                <div class="slider">
+                    <img src="images/photo1.jpg" alt="photo1">
+                    <img src="images/girls.jpg" alt="photo2">
+                    <img src="images/photo3.jpg" alt="photo3">
+                    <img src="images/background.jpg" alt="photo4">
+                </div>
+                <button id="next">→</button>
+            </div>
+        </div>
+        <div class="overlay">
+            <div class="container_fade">
+                <div class="site-title">
+                    <h1 style="font-weight: bold;">העתיד שלך בידיים טובות</h1>
+                    <h4>אנו מציעים מגוון פתרונות חיסכון וביטוח המותאמים לצרכים האישיים שלך, כדי להבטיח יציבות ושקט נפשי בכל שלב בחיים.</h4>
+                </div>
+            </div>
+        </div>
+  </div>
+</header>
+
+<main>
+    <section class="modal fade" id="info" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">מלאו את הפרטים וניצור איתכם/ן קשר</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">שם פרטי</label>
+                        <input type="text" id="name" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="surname" class="form-label">שם משפחה</label>
+                        <input type="text" id="surname" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">דואר אלקטרוני</label>
+                        <input type="email" id="email" class="form-control">
+                        <div id="emailError" class="text-danger" style="display:none;">אנא הזן כתובת דוא"ל חוקית</div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div id="Error" class="text-danger" style="display:none;">אנא מלאו את כל הפרטים</div>
+                    <button type="button" id="sendButton" class="btn btn-warning">שליחה</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">סגירה</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-3 mt-4" id="cardContainer">
+        </div>
+    </section>
+
+    <section class="feedbackSection">
+        <h2 class="feedbackTitle"> הלקוחות המרוצים שלנו </h2>
+        <div class="feedbackContainer">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-2" id="feedbackCon">
+            </div>
+        </div>
+    </section>
+</main>
+</body>
+</html>
